@@ -1,0 +1,677 @@
+/* Komponet */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+  font-family:'Roboto', sans-serif;
+  background-color: greenyellow;
+  overflow-x: hidden;
+}
+
+.clear{
+  text-decoration: none;
+  color: red;
+} 
+
+.justify-text{
+  text-align: justify;
+}
+.center{
+  margin: auto;
+}
+
+.box{
+  box-shadow: 0 4px 8px 0 rgba(65, 63, 63, 0.2);
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.color-default{
+  background-color: white;
+  color: white;
+}
+
+/* Navbar */
+nav{
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  background-color: rgb(122, 255, 122);
+  justify-content: space-around;
+  color: red;
+  font-size: 18px;
+  height: 60px;
+  align-items: center;
+}
+
+
+nav ul .active-link{
+  border-bottom: 3px solid red;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 35%;
+}
+
+nav .logo-game .text{
+  font-family: 'Pangolin', cursive;
+}
+
+nav ul li a {
+  color: rgb(243, 99, 99);
+  text-decoration: none;
+}
+
+/* hamburge menu nav mobile*/
+.menu-toggle{
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle span{
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: rgb(245, 126, 126);
+  transition: all 0.7s;
+}
+
+.menu-toggle input{
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  left: -5px;
+  top: -4px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* hamburger menu animation */
+.menu-toggle input:checked ~ span:nth-child(2){
+  transform-origin: 0 0;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4){
+  transform-origin: 0 100%;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+  opacity: 0;
+  transform: scale(0);
+}
+
+
+
+
+
+
+/* Jumbotron */
+.jumbotron{
+  display: flex;
+  flex-direction: column;
+  margin-top: 42px;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  padding: 60px;
+}
+
+.jumbotron .img{
+  background-image: url(../img/myfoto.jpg);
+  background-size: cover;
+  width: 25%;
+  height: 50vh;
+  border-radius: 250px;
+}
+
+.jumbotron .isi-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 25px;
+  width: 65%;
+  font-family: 'Dancing Script', cursive;
+}
+
+.jumbotron .isi-text .text-1{
+  display: flex;
+  font-size: 60px;
+  flex-direction: row;
+  width: 60%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.jumbotron .isi-text .text-2{
+  font-size: 70px;
+}
+
+/* main */
+main .konteks{
+  display: flex;
+  flex-direction: row;
+}
+
+/* aside */
+.aside{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 25%;
+  height: 60vh;
+  margin-top: 77px;
+  margin-right: 120px;
+  margin-left: -100px;
+  border: 3px solid white;
+  color: white;
+  background-color:rgb(118, 94, 255);;
+}
+
+.aside .informasi{
+  display: flex;
+  flex-direction: row;
+  padding:30px;
+  width: 130%;
+  margin: -30px -30px;
+  justify-content: space-around;
+}
+
+aside .box-1{
+  display: flex;
+  margin-left: -10px;
+}
+
+.box-1 .label{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 10%;
+  margin-right: 5px;
+  justify-content: space-around;
+}
+
+.box-1 .isi-label{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 80%;
+  justify-content: space-around;
+}
+
+.aside-gambar{
+  display: flex;
+  margin-left: -20px;
+  margin-right: 10px;
+  flex-basis: 30%;
+  height: 120px;
+  background-image: url("../img/myfoto.jpg");
+  background-size: cover;
+}
+
+.margin-text{
+  padding-top: 10px;
+}
+/* content */
+.content{
+  display: flex;
+  flex-basis: 75%;
+  flex-direction: column;
+  margin: 20px 120px;
+  justify-content: space-evenly;
+}
+
+.content-all{
+  margin: 20px 0;
+}
+
+
+/* Content 1 */
+.content .body-content{
+  padding: 30px;
+}
+
+.content .judul-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60px;
+  justify-content: space-evenly;
+}
+
+.content .judul-content .decoration{
+  height: 5px;
+  width: 65%;
+  background-color: white;
+  border-radius: 2.5px;
+}
+
+.content .content-1{
+  background-color: rgb(118, 94, 255);
+}
+.content .isi-content{
+  display: flex;
+}
+
+/* Content 2 */
+.content .content-2{
+  background-color: rgb(41, 255, 237);
+}
+
+.content .content-2 .isi-content .isi-content-1{
+  display: flex;
+  flex-basis: 25%;
+  justify-content: center;
+  align-items: center;
+}
+.content .content-2 .isi-content .isi-content-2{
+  display: flex;
+  flex-basis: 75%;
+  justify-content: space-evenly;
+}
+
+table{
+  color: red;
+}
+table tr th{
+  color: white;
+  background-color: rgb(17, 0, 255);
+  padding: 10px;
+  text-align: center;
+}
+table tr td{
+  color: white;
+  background-color: tomato;
+  padding: 10px;
+  text-align: center;
+}
+
+/* content 3 */
+.content .content-3{
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: space-evenly;
+}
+.isi-galerry{
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  margin-top: 20px;
+  justify-content: space-evenly;
+  background-color: rgb(51, 255, 0);
+}
+.gallerry{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.gallerry li{
+  overflow: hidden;
+  border: 5px solid red;
+  position: relative;
+}
+
+.gallerry li,
+.gallerry li span{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.gallerry li span{
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 120px;
+  color: white;
+  top: 0;
+  position: absolute;
+  background-color: rgba(41, 255, 237, 0.4);
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(-100%) rotate(360deg);
+}
+
+.gallerry li a:hover span{
+  opacity: 1;
+  transform: translateY(0) rotate(0deg);
+}
+
+.overlay{
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0, 0);
+  z-index: 99999;
+  transition: 1s;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.overlay:target{
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0, 0.8);
+}
+.overlay .close{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.overlay:target .close{
+  animation: rightAndLeft 1s;
+}
+
+.overlay:target .next-button,
+.overlay:target .prev-button{
+  animation: fade 0.5s 0.5s forwards;
+}
+.overlay img {
+  max-height: 100%;
+  box-shadow: 2px 2px 7px rgb(255, 255, 255, 0.2);
+}
+
+.overlay:target img {
+  animation: zooDanFade 1s;
+}
+
+.next-button,
+.prev-button{
+  position: absolute;
+  width: 57px;
+  height: 93px;
+  background-image: url(../img/next\ button.png);
+  text-indent: -99999px;
+  top: 40%;
+  margin-left: 50px;
+  opacity: 0;
+}
+
+.prev-button{
+  background-image: url(../img/Trun\ button.png);
+  margin-left: -100px;
+}
+
+/* content 4 kontak */
+.column{
+  flex-direction: column;
+  min-height: 300px;
+  justify-content: space-evenly;
+}
+.flex-row{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.right {
+  justify-content: right;
+  margin-top: 20px;
+}
+
+.flex-row .box-text{
+  width: 50%;
+}
+
+/* button kirim */
+.btn{
+  width: 70px;
+  border-radius: 20%;
+  box-shadow: 0 4px 8px 2px rgba(201, 200, 200, 0.5);
+  height: 25px;
+  font-style: oblique;
+  cursor: pointer;
+}
+
+.btn:target {
+  box-shadow: 0 0 0 0 rgb(255, 255, 255, 0);
+}
+
+.btn-success{
+  background-color: rgb(16, 0, 247);
+  color: rgb(0, 255, 0);
+}
+
+/* footer */
+footer {
+  background-color: rgb(122, 255, 122);
+  margin: 0 auto;
+}
+
+.text-none{
+  color: red;
+  text-decoration: none;
+}
+
+
+/* animasi */
+@keyframes fade{
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes zooDanFade {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rightAndLeft {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/* Responsive Break Point */
+
+/* ukuran min screen */
+@media screen and (max-width : 900px){
+  /* navbar */
+  nav ul {
+    width: 50%;
+  }
+
+  /* jumbotron */
+  .jumbotron .img{
+    height: 40vh !important;
+    border-radius: 150px;
+  }
+
+  .jumbotron .isi-text{
+    width: 80%;
+  }
+  .jumbotron .isi-text .text-1{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  /* content */
+  .content{
+    margin: 20px 60px;
+  }
+  .content .isi-content{
+    flex-direction: column;
+  }
+}
+
+/* ukuran tablet */
+@media screen and (max-width : 760px){
+  nav ul {
+    width: 60%;
+  }
+  .jumbotron .img{
+    width: 45%;
+    border-radius: 125px;
+  }
+
+  .jumbotron .isi-text{
+    font-size: 30px;
+    width: 100%;
+  }
+  .jumbotron .isi-text .text-1{
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* aside */
+  .aside{
+    display: none;
+  }
+
+  main .konteks{
+    display: flex;
+    flex-direction: column;
+  }
+  /* content 3 */
+  .overlay img {
+    margin-top: 30px;
+    max-height: 100%;
+    max-width: 65%;
+  }
+}
+
+/* ukuran mobile */
+
+@media screen and (max-width : 576px){
+  .box{
+  box-shadow: 0;
+  border-radius: 0;
+  padding: 0;
+  }
+  /* navbar */
+  nav ul {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 75%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(122, 255, 80);
+    justify-content: space-evenly;
+    margin-top: 60px;
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  nav ul li a{
+    color: red;
+  }
+
+  /* jangan pakai space */
+  nav ul.siled {
+    opacity: 0.9;
+    transform: translateX(0);
+  }
+
+  .menu-toggle{
+    display: flex;
+  }
+
+  /* Jumbotron */
+  .jumbotron .img{
+    margin: 10px 0;
+    height: 12vh !important;
+    width: 80px;
+    border-radius: 755px;
+  }
+
+  .jumbotron .isi-text{
+    font-size: 30px;
+    width: 100%;
+  }
+  .jumbotron .isi-text .text-1{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    font-size: 40px;
+  }
+  
+  /* content */
+  .content{
+    margin: 20px 0;
+  }
+
+  .margin-pasif{
+    margin: 20px 0;
+  }
+  .content .isi-content{
+    margin: 10px 0;
+  }
+
+  /* Content Galerry */
+  .content .content-3{
+    height: 100vh;
+  }
+  .content .content-3 .judul-3{
+    margin-top: -60px;
+  }
+  .isi-galerry{
+    margin-top: -50px;
+  }
+
+  .overlay img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .prev-button {
+    margin-left: 0;
+  }
+
+  .next-button{
+    margin-left: -50px;
+  }
+
+  .overlay:target .next-button{
+  animation: fade 0.8s 0.8s forwards;
+  }
+
+  /* content 4 kontak saya */
+  .pading-box{
+    padding: 0 30px;
+  }
+  footer .footer-decoration{
+    padding: 15vh 10vh;
+  }
+}
