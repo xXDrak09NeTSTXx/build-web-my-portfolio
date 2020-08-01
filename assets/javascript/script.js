@@ -55,22 +55,26 @@ if (typeof (Storage) !== "undefined") {
     const kirim = document.querySelector("#kirim");
 
     kirim.addEventListener('click', function () {
-        alert("data berhasil di simpan");
         const nama = document.getElementById("nama").value;
         const email = document.getElementById("email").value;
         const nomor = document.getElementById("nomor").value;
         const pesan = document.getElementById("pesan").value;
+        if (nama == !null && email == !null && nomor == !null && pesan == !null) {
+            alert("data berhasil di simpan");
 
 
-        localStorage.setItem("nama", nama);
-        localStorage.setItem("email", email);
-        localStorage.setItem("nomor", nomor);
-        localStorage.setItem("pesan", pesan);
+            localStorage.setItem("nama", nama);
+            localStorage.setItem("email", email);
+            localStorage.setItem("nomor", nomor);
+            localStorage.setItem("pesan", pesan);
 
-        localStorage.getItem("nama");
-        localStorage.getItem("email");
-        localStorage.getItem("nomor");
-        localStorage.getItem("pesan");
+            localStorage.getItem("nama");
+            localStorage.getItem("email");
+            localStorage.getItem("nomor");
+            localStorage.getItem("pesan");
+        } else {
+            alert("tolong isi semua kolum");
+        }
     });
 } else {
     // Browser tidak mendukung sessionStorage/LocalStorage
